@@ -1,6 +1,6 @@
 import { screen, render, within } from '@testing-library/react';
-import QuizArea from '.';
-import { IQuizSet } from '@/interfaces/interfaces';
+import QuizArea from '@/component/QuizArea';
+import { IQuizSet } from '../interfaces/interfaces';
 
 const mockData: IQuizSet = {
     question: 'question',

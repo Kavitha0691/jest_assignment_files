@@ -1,4 +1,4 @@
-import { IQuizSet } from "@/interfaces/interfaces";
+import { IQuizSet } from "../interfaces/interfaces" 
 
 const firstRoundQuizSet: IQuizSet = {
     question: "What is the most common 'Coffee bean' type?",
