@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ProgressBar from '.';
+import ProgressBar from '@/component/ProgressBar';
 import { IQuizSet } from '@/interfaces/interfaces';
 
 
