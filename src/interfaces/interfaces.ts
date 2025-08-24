@@ -2,6 +2,10 @@ export interface GameHeaderProps {
   player: string;
 }
 
+export interface CreatePlayerProps {
+  setPlayer: (name: string) => void;
+}
+
 export interface IQuizSet {
   question: string;
   answer: number;
