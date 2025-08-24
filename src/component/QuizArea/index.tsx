@@ -1,5 +1,5 @@
 import React from "react";
-import { IQuizSet, QuizAreaProps } from "@/interfaces/interfaces";
+import { IQuizSet, QuizAreaProps } from "../../interfaces/interfaces";
 
 const QuizArea: React.FC<QuizAreaProps> = ({ gameQuiz, step, answer, onClick }) => {
   const { question, alternatives, answer: correctIndex } = gameQuiz[step];

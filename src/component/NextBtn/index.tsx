@@ -1,5 +1,5 @@
 import React from "react";
-import { IQuizSet, NextBtnProps } from "@/interfaces/interfaces";
+import { IQuizSet, NextBtnProps } from "../../interfaces/interfaces";
 
 const NextBtn: React.FC<NextBtnProps> = ({ step, gameQuiz, answer, onClick }) => {
   const isLast = step === gameQuiz.length - 1;

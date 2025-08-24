@@ -1,5 +1,5 @@
 import React from "react";
-import { IQuizSet, ProgressBarProps } from "@/interfaces/interfaces";
+import { IQuizSet, ProgressBarProps } from "../../interfaces/interfaces";
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ step, gameQuiz }) => {
   return (

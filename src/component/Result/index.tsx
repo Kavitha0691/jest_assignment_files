@@ -1,5 +1,5 @@
 import React from "react";
-import { IResult } from "@/interfaces/interfaces";
+import { IResult } from "../../interfaces/interfaces";
 
 const Result: React.FC<IResult> = ({ rightAnswers, amountOfAnswers, onClick }) => {
   return (

@@ -6,8 +6,8 @@ import ProgressBar from "../ProgressBar";
 import QuizArea from "../QuizArea";
 import NextBtn from "../NextBtn";
 import Result from "../Result";
-import { gameQuiz } from "@/data/data";
-import { GameBoardProps } from "@/interfaces/interfaces";
+import { gameQuiz } from "../../data/data";
+import { GameBoardProps } from "../../interfaces/interfaces";
 
 const GameBoard: React.FC<GameBoardProps> = ({ player }) => {
   const [step, setStep] = useState(0);

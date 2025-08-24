@@ -1,6 +1,6 @@
 "use client";
 
-import { CreatePlayerProps } from "@/interfaces/interfaces";
+import { CreatePlayerProps } from "../../interfaces/interfaces";
 import React, { useState } from "react";
 
 const CreatePlayer: React.FC<CreatePlayerProps> = ({ setPlayer }) => {

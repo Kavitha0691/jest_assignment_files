@@ -1,4 +1,4 @@
-import { GameHeaderProps } from "@/interfaces/interfaces";
+import { GameHeaderProps } from "../../interfaces/interfaces";
 import React from "react";
 
 const GameHeader: React.FC<GameHeaderProps> = ({ player }) => {
