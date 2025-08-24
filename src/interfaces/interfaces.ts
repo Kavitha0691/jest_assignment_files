@@ -9,3 +9,7 @@ export interface IResult {
   amountOfAnswers: number;
   onClick: () => void;
 }
+
+export interface GameBoardProps {
+  player: string;
+}

@@ -7,10 +7,7 @@ import QuizArea from "../QuizArea";
 import NextBtn from "../NextBtn";
 import Result from "../Result";
 import { gameQuiz } from "@/data/data";
-
-interface GameBoardProps {
-  player: string;
-}
+import { GameBoardProps } from "@/interfaces/interfaces";
 
 const GameBoard: React.FC<GameBoardProps> = ({ player }) => {
   const [step, setStep] = useState(0);
@@ -45,34 +42,41 @@ const GameBoard: React.FC<GameBoardProps> = ({ player }) => {
   const score = answers.filter((ans, i) => ans === gameQuiz[i].answer).length;
 
   return (
-    <div>
+    <div className="w-full max-w-5xl mx-auto p-6 bg-white rounded-2xl shadow-lg">
       <GameHeader player={player} />
+
       {!showResult ? (
         <>
-          <ProgressBar step={step} gameQuiz={gameQuiz} />
-          
-          <QuizArea
-            gameQuiz={gameQuiz}
-            step={step}
-            answer={selected !== null}
-            onClick={handleSelect}
-          />
+          <div className="mb-6">
+            <ProgressBar step={step} gameQuiz={gameQuiz} />
+          </div>
 
-          <NextBtn
-            step={step}
-            gameQuiz={gameQuiz}
-            answer={selected !== null}
-            onClick={handleNext}
-          />
+          <div className="mb-6">
+            <QuizArea
+              gameQuiz={gameQuiz}
+              step={step}
+              answer={selected !== null}
+              onClick={handleSelect}
+            />
+          </div>
 
+          <div className="flex justify-end">
+            <NextBtn
+              step={step}
+              gameQuiz={gameQuiz}
+              answer={selected !== null}
+              onClick={handleNext}
+            />
+          </div>
         </>
       ) : (
-        <Result
-          rightAnswers={score}
-          amountOfAnswers={gameQuiz.length}
-          onClick={handlePlayAgain}
-        />
-
+        <div className="text-center">
+          <Result
+            rightAnswers={score}
+            amountOfAnswers={gameQuiz.length}
+            onClick={handlePlayAgain}
+          />
+        </div>
       )}
     </div>
   );
