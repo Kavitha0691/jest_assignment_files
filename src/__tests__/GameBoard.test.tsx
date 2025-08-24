@@ -1,5 +1,5 @@
 import { screen, render, within, fireEvent, queryByTestId } from '@testing-library/react';
-import GameBoard from '.';
+import GameBoard from '@/component/GameBoard';
 import { gameQuiz } from '@/data/data';
 
 test("should render a GameHeader component", () => {
