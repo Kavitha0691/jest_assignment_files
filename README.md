@@ -8,3 +8,14 @@ When all questions is answered, it will show a result of your points, also a pla
 ![Quiz Screenshot 2](public/ss-2.png?raw=true)
 ![Quiz Screenshot 3](public/ss-3.png?raw=true)
 ![Quiz Screenshot 4](public/ss-4.png?raw=true)
+
+
+
+## Feedback on the Tests
+## What worked well
+
+The tests provided clear acceptance criteria for each component.
+
+They ensured consistent behavior (e.g., player name limited to 15 characters, disabling buttons after answer).
+
+
