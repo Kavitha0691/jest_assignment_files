@@ -17,6 +17,13 @@ export interface ProgressBarProps {
   gameQuiz: IQuizSet[];
 }
 
+export interface QuizAreaProps {
+  gameQuiz: IQuizSet[];
+  step: number;
+  answer: boolean;
+  onClick: (index: number) => void;
+}
+
 export interface IResult {
   rightAnswers: number;
   amountOfAnswers: number;
