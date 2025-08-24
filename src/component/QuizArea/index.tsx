@@ -11,15 +11,26 @@ const QuizArea: React.FC<QuizAreaProps> = ({ gameQuiz, step, answer, onClick }) 
         {alternatives.map((alt, i) => {
           let className = "idle";
           if (answer) {
-            className =
-              i === correctIndex
-                ? "bg-green-500 text-black text-xl font-bold"
-                : "bg-red-50 text-balck";
+            className = i === correctIndex ? "correct" : "wrong";
           }
 
+          const tailwindClasses = "rounded-lg overflow-hidden";
+
           return (
-            <li key={i} data-testid="alternative-item" className={`rounded-lg overflow-hidden`}>
-              <button onClick={() => onClick(i)} disabled={answer} className={`w-full text-left px-4 py-2 transition-colors ${className} hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-70`}>
+            <li
+              key={i}
+              data-testid="alternative-item"
+              className={`${className} ${tailwindClasses}`}
+            >
+              <button
+                onClick={() => onClick(i)}
+                disabled={answer}
+                className={`w-full text-left px-4 py-2 transition-colors
+                  ${i === correctIndex && answer ? "bg-green-500 text-black font-bold" : ""}
+                  ${i !== correctIndex && answer ? "bg-red-100 text-black" : ""}
+                 
+                `}
+              >
                 {alt}
               </button>
             </li>

@@ -60,7 +60,7 @@ const GameBoard: React.FC<GameBoardProps> = ({ player }) => {
             />
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <NextBtn
               step={step}
               gameQuiz={gameQuiz}
