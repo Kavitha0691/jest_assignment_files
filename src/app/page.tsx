@@ -20,9 +20,9 @@ const Home: React.FC = () => {
           data-testid="createPlayer"
           className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-lg text-center"
         >
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+          <h1 className="text-3xl font-bold mb-6 text-gray-800">
             Welcome to the Quiz
-          </h2>
+          </h1>
           <div className="mb-4 text-left">
             <label
               htmlFor="playerName"

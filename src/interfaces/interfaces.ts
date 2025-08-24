@@ -1,6 +1,10 @@
+export interface GameHeaderProps {
+  player: string;
+}
+
 export interface IQuizSet {
   question: string;
-  answer: number; // index of the correct alternative
+  answer: number;
   alternatives: string[];
 }
 
