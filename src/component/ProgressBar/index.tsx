@@ -1,17 +1,14 @@
 import React from "react";
-import { IQuizSet } from "@/interfaces/interfaces";
+import { IQuizSet, ProgressBarProps } from "@/interfaces/interfaces";
 
-interface Props {
-  step: number;
-  gameQuiz: IQuizSet[];
-}
-
-const ProgressBar: React.FC<Props> = ({ step, gameQuiz }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({ step, gameQuiz }) => {
   return (
-    <div>
-      <progress role="progressbar" value={step} max={gameQuiz.length}></progress>
-      <p>{`${step} / ${gameQuiz.length}`}</p>
-    </div>
+    <>
+      <div className="w-full" >
+        <progress role="progressbar" value={step} max={gameQuiz.length} className="w-full h-6 rounded-lg bg-gray-50 overflow-hidden"></progress>
+        <p className=" text-sm text-gray-700 text-right">{`${step} / ${gameQuiz.length}`}</p>
+      </div>
+    </>
   );
 };
 

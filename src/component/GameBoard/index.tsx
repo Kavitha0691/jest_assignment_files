@@ -47,11 +47,11 @@ const GameBoard: React.FC<GameBoardProps> = ({ player }) => {
 
       {!showResult ? (
         <>
-          <div className="mb-6">
+          <div className="mb-2">
             <ProgressBar step={step} gameQuiz={gameQuiz} />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-2">
             <QuizArea
               gameQuiz={gameQuiz}
               step={step}

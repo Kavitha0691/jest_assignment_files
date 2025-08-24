@@ -8,6 +8,11 @@ export interface IQuizSet {
   alternatives: string[];
 }
 
+export interface ProgressBarProps {
+  step: number;
+  gameQuiz: IQuizSet[];
+}
+
 export interface IResult {
   rightAnswers: number;
   amountOfAnswers: number;
